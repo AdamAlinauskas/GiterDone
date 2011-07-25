@@ -1,0 +1,8 @@
+bin/
+obj/
+Bin/
+App_Data/
+*.suo
+*.user
+TestResults/
+_ReSharper.Inspections/
