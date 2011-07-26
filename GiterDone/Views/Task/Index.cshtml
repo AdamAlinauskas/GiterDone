@@ -1,5 +1,4 @@
 ﻿@model object
-
 @{
     Layout = null;
 }
@@ -19,18 +18,12 @@
         <div>
               Task <input type="text" data-bind="value: newTaskText"/>
               <button id="AddTask" data-bind="click: addTask">Add</button>
-              <p data-bind="text: newTaskText"></p>
               <ul data-bind="template: { name: 'taskTemplate', foreach: tasks }"></ul>
         </div>
     </body>
-
-
     <script type="text/x-jquery-tmpl" id="taskTemplate">
         <li>
             <p data-bind="text: name"/>    
         </li>
     </script>
-
-
-   
 </html>
