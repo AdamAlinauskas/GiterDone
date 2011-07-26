@@ -18,7 +18,7 @@
         <h1>Git'er Done</h1>
         <div>
               Task <input type="text" data-bind="value: newTaskText"/>
-              <button id="AddTask">Add</button>
+              <button id="AddTask" data-bind="click: addTask">Add</button>
               <p data-bind="text: newTaskText"></p>
               <ul data-bind="template: { name: 'taskTemplate', foreach: tasks }"></ul>
         </div>
