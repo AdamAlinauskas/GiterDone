@@ -7,7 +7,7 @@
     var tasksViewModel = {
         tasks: ko.observableArray([]),
         addTask: function () { this.tasks.push(new task(this.newTaskText())); },
-        newTaskText: ko.observable(""),
+        newTaskText: ko.observable("")
         //save: function () { window.localStorage.setItem("tasks", JSON.stringify(ko.toJSON())); }
     };
 
