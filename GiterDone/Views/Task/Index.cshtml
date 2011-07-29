@@ -2,7 +2,6 @@
 @{
     Layout = null;
 }
-
 <!DOCTYPE html>
 
 <html>
@@ -15,15 +14,15 @@
     </head>
     <body>
         <h1>Git'er Done</h1>
-        <div>
-              Task <input type="text" data-bind="value: newTaskText"/>
-              <button id="AddTask" data-bind="click: addTask">Add</button>
+       <form data-bind="submit:addTask">
+              Task <input type="text" data-bind="value: newTaskText" placeholder="Task Description"/>
+              <input type="submit">Add</input>
               <ul data-bind="template: { name: 'taskTemplate', foreach: tasks }"></ul>
-        </div>
+        </form>
     </body>
     <script type="text/x-jquery-tmpl" id="taskTemplate">
         <li>
-            <p data-bind="text: name"/>    
+            <input type="checkbox" data-bind="checked:isDone"/><input type="text" data-bind="value: name"/>    
         </li>
     </script>
 </html>
